@@ -1,0 +1,5 @@
+name: EyeDrop
+main: ${project.groupId}.${project.artifactId}.Main
+version: ${project.version}
+author: LeonTG
+description: Makes all players drop an Eye of Ender on death. Made for Manhunts.
