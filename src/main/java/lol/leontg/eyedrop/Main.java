@@ -16,11 +16,11 @@ public class Main extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
-        getServer().getPluginManager().registerEvents(this, this);
-    }
-
-    @EventHandler
-    public void on(PlayerDeathEvent event) {
-        event.getDrops().add(new ItemStack(Material.ENDER_EYE));
+        getServer().getPluginManager().registerEvents(new Listener() {
+            @EventHandler
+            public void on(PlayerDeathEvent event) {
+                event.getDrops().add(new ItemStack(Material.ENDER_EYE));
+            }
+        }, this);
     }
 }
